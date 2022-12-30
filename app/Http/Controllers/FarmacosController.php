@@ -31,5 +31,8 @@ class FarmacosController extends Controller
     }
     public function addFarmaco (){
         return view('farmacos.adicionarfarmaco');
-    } 
+    }
+    public function adicionarusuarios (){
+        return view('cadastrarusuarios.adicionarusuarios');
+    }        
 }
