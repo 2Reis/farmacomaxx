@@ -8,18 +8,9 @@
 </head>
 <body>
     <h1>Cadastrar Usuarios</h1>
-
+    
     <input class="form-control form-control-lg" type="text" name="name">      
     <input class="form-control" type="text" name="email">
-    <input class="form-control form-control-sm" type="text" name="senha">
-    <form action="{{ rout('user.store') }}" method="POST">
-        @csrf
-        Nome: <input type="text" name="name">
-        <br>  
-        Email: <input type="text" name="email">
-        <br>  
-        Senha: <input type="password" name="senha">
-        <br>  
-    </form>    
+    <input class="form-control form-control-sm" type="text" name="senha">     
 </body>
 </html>
