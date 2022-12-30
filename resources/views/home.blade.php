@@ -16,12 +16,22 @@
                 <div class="col-12 p-5 text-center"> 
                     <img src="https://files.passeidireto.com/1273a534-7a0f-4051-8347-b3c8b6944083/1273a534-7a0f-4051-8347-b3c8b6944083.png" alt="">
                 </div>
-                <div class="col-6 p-5 text-center">
+                <div class="col-3 p-5 text-center">
                     <a href="{{route('farma')}}">
                         <input type="button" value="Lista de produtos" class="btn btn-primary">
                     </a>                    
                 </div>
-                <div class="col-6 p-5 text-center">
+                <div class="col-3 p-5 text-center">
+                    <a href="{{route('adicionarfarmaco')}}">
+                        <input type="button" value="Adicionar Farmacos" class="btn btn-warning">
+                    </a>                    
+                </div>
+                <div class="col-3 p-5 text-center">
+                    <a href="{{route('adicionarusuarios')}}">
+                        <input type="button" value="Cadastrar Usuarios" class="btn btn-warning">
+                    </a>                    
+                </div>
+                <div class="col-3 p-5 text-center">
                     <a href="{{route('medicamentos',['name'=>'generico'])}}">
                         <input type="button" value="Lista de Genericos" class="btn btn-secondary"> 
                     </a>                       

@@ -10,17 +10,17 @@ class FarmacosController extends Controller
     public function index()
     {        
         $farmacos = Farmacos::get();
-        return view('farma',['farmacos' => $farmacos]);
+        return view('farmacos.farma',['farmacos' => $farmacos]);
     }
     
     public function medicamentos(Request $request, $medicamento)
     {
         $farmacos = Farmacos::where("category",$medicamento)->get();
-        return view('farma',['farmacos' => $farmacos]);
+        return view('farmacos.farma',['farmacos' => $farmacos]);
     }
     public function editeFarmaco (Request $request, $medicamento){
         $med = Farmacos::findOrFail($medicamento);
-        return view('editefarma',['medicamento' => $med]);
+        return view('farmacos.editefarma',['medicamento' => $med]);
     }
     public function removeFarmaco (Request $request, $medicamento){
         Farmacos::destroy($medicamento);
@@ -29,4 +29,7 @@ class FarmacosController extends Controller
     public function insereFarmaco(){
        return view('inserefarma');
     }
+    public function addFarmaco (){
+        return view('farmacos.adicionarfarmaco');
+    } 
 }
