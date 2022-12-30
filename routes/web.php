@@ -38,7 +38,7 @@ Route::get('/medicamentos/{name}', [FarmacosController::class, 'medicamentos'])-
 Route::get('/editefarmaco/{id}', [FarmacosController::class, 'editeFarmaco'])->name('editefarmaco');
 Route::get('/removefarmaco/{id}', [FarmacosController::class, 'removeFarmaco'])->name('removefarmaco');
 Route::get('/adicionarfarmaco', [FarmacosController::class, 'addFarmaco'])->name('adicionarfarmaco'); 
-Route::get('/user.store', [FarmacosController::class, 'cadastrarusuarios'])->name('user.store'); 
+Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'])->name('adicionarusuarios'); 
 
     Route::get('/home', function () {
         return view('Welcome');
