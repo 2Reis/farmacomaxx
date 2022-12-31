@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Farmacos;
+use Illuminate\Support\Facades\Redirect;
 
 class FarmacosController extends Controller
 {
@@ -31,6 +32,11 @@ class FarmacosController extends Controller
     }
     public function addFarmaco (){
         return view('farmacos.adicionarfarmaco');
+    }
+    public function addFarming (Request $request, $farmacos){
+        $farmacos = new Farmacos();
+        $farmacos = $farmacos -> create($request -> all());       
+        return Redirect::to('/farma');
     }
     public function adicionarusuarios (){
         return view('cadastrarusuarios.adicionarusuarios');
