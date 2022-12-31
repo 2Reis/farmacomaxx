@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Redirect;
 class FarmacosController extends Controller
 {
     public function index()
-    {        
+    {
         $farmacos = Farmacos::get();
         return view('farmacos.farma',['farmacos' => $farmacos]);
     }
-    
+
     public function medicamentos(Request $request, $medicamento)
     {
         $farmacos = Farmacos::where("category",$medicamento)->get();
@@ -33,12 +33,12 @@ class FarmacosController extends Controller
     public function addFarmaco (){
         return view('farmacos.adicionarfarmaco');
     }
-    public function addFarming (Request $request, $farmacos){
+    public function addFarming (Request $request){
         $farmacos = new Farmacos();
-        $farmacos = $farmacos -> create($request -> all());       
+        $farmacos = $farmacos -> create($request -> all());
         return Redirect::to('/farma');
     }
     public function adicionarusuarios (){
         return view('cadastrarusuarios.adicionarusuarios');
-    }        
+    }
 }

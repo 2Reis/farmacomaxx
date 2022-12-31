@@ -37,8 +37,9 @@ Route::get('/farma', [FarmacosController::class, 'index'])->name('farma');
 Route::get('/medicamentos/{name}', [FarmacosController::class, 'medicamentos'])->name('medicamentos');
 Route::get('/editefarmaco/{id}', [FarmacosController::class, 'editeFarmaco'])->name('editefarmaco');
 Route::get('/removefarmaco/{id}', [FarmacosController::class, 'removeFarmaco'])->name('removefarmaco');
-Route::get('/adicionarfarmaco', [FarmacosController::class, 'addFarmaco'])->name('adicionarfarmaco'); 
-Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'])->name('adicionarusuarios'); 
+Route::get('/adicionarfarmaco', [FarmacosController::class, 'addFarmaco'])->name('adicionarfarmaco');
+Route::post('/addFarm', [FarmacosController::class, 'addFarming'])->name('addfaming');
+Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'])->name('adicionarusuarios');
 
     Route::get('/home', function () {
         return view('Welcome');
@@ -46,8 +47,8 @@ Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'
 
 Route::fallback (function(){
     return "Erro ao localizar a rota!";
-});   
+});
 
-  
+
 
 
