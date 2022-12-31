@@ -14,7 +14,7 @@
         <div class="row">
           <div class="col-6 col-sm-3">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" placeholder="Insira o nome..">
+            <input type="text" name="name" placeholder="Insira o nome..">
           </div>
           <div class="col-6 col-sm-3">
             <label for="nome">Preço:</label>

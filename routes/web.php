@@ -40,6 +40,7 @@ Route::get('/removefarmaco/{id}', [FarmacosController::class, 'removeFarmaco'])-
 Route::get('/adicionarfarmaco', [FarmacosController::class, 'addFarmaco'])->name('adicionarfarmaco');
 Route::post('/addFarm', [FarmacosController::class, 'addFarming'])->name('addfaming');
 Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'])->name('adicionarusuarios');
+Route::post('/addusers', [FarmacosController::class, 'addFarming'])->name('addfaming');
 
     Route::get('/home', function () {
         return view('Welcome');
