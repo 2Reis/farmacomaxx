@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-5 text-center"> 
-                    <img src="https://files.passeidireto.com/1273a534-7a0f-4051-8347-b3c8b6944083/1273a534-7a0f-4051-8347-b3c8b6944083.png" alt="">
+                    <img src="http://wordpress-direta.s3.sa-east-1.amazonaws.com/sites/1343/wp-content/uploads/2020/11/06161002/Maxxi-Economica-Farmacias-LOGO-768x316-1.png" alt="">
                 </div>
                 <div class="col-3 p-5 text-center">
                     <a href="{{route('farma')}}">
