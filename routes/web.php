@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\FarmacosController;
+use App\Http\Controllers\CrudController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,37 +14,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/home', function () {
-//    return view('welcome');
-//});
-
-// route::view('/farma','farma');
-
-// Route::get('/farma', function () {
-//    return "TESTANDO VIEW FARMACO";
-//     });
-
-//route::view('/farma','farma',['name'=> 'Fluxetina']);
-
-// route::get('/farma/{id?}/{name?}', function($name = null, $id = null){
-//     return view('farma',['nameFarmaco'=> $name, 'idFarmaco'=> $id]);
-// }) ->where(['name' => '[a-z]+','id' => '[0-9]+']);
-
 Route::get('/', function (){
     return view ('home');
 });
-Route::get('/farma', [FarmacosController::class, 'index'])->name('farma');
-Route::get('/medicamentos/{name}', [FarmacosController::class, 'medicamentos'])->name('medicamentos');
-Route::get('/editefarmaco/{id}', [FarmacosController::class, 'editeFarmaco'])->name('editefarmaco');
-Route::get('/removefarmaco/{id}', [FarmacosController::class, 'removeFarmaco'])->name('removefarmaco');
-Route::get('/adicionarfarmaco', [FarmacosController::class, 'addFarmaco'])->name('adicionarfarmaco');
-Route::post('/addFarm', [FarmacosController::class, 'addFarming'])->name('addfaming');
-Route::get('/upFarm/{id}', [FarmacosController::class, 'upFarming'])->name('upFarm');
-Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'])->name('adicionarusuarios');
-Route::get('/userlist', [FarmacosController::class, 'userlist'])->name('userlist');
-Route::post('/addfarmacos', [FarmacosController::class, 'addFarming'])->name('addfaming');
-Route::get('/farmacos.editefarma', [FarmacosController::class, 'editeFarms'])->name('editefarms');
-
+// Farmacos
+Route::get('/farma', [CrudController::class, 'index'])->name('farma');
+Route::get('/medicamentos/{name}', [CrudController::class, 'medicamentos'])->name('medicamentos');
+Route::get('/editefarmaco/{id}', [CrudController::class, 'editeFarmaco'])->name('editefarmaco');
+Route::get('/removefarmaco/{id}', [CrudController::class, 'removeFarmaco'])->name('removefarmaco');
+Route::get('/adicionarfarmaco', [CrudController::class, 'addFarmaco'])->name('adicionarfarmaco');
+Route::post('/addFarm', [CrudController::class, 'addFarming'])->name('addfaming');
+Route::get('/upFarm/{id}', [CrudController::class, 'upFarming'])->name('upFarm');
+Route::post('/addfarmacos', [CrudController::class, 'addFarming'])->name('addfaming');
+Route::get('/farmacos.editefarma', [CrudController::class, 'editeFarms'])->name('editefarms');
+// *
+// Usuarios
+Route::get('/adicionarusuarios', [CrudController::class, 'adicionarusuarios'])->name('adicionarusuarios');
+Route::post('/adduser', [CrudController::class, 'addUser'])->name('adduser');
+Route::get('/userlist', [CrudController::class, 'userlist'])->name('userlist');
+Route::get('/editeuser/{id}', [CrudController::class, 'editeusers'])->name('editeuser');
+Route::get('/removeuser/{id}', [CrudController::class, 'removeusers'])->name('removeuser');
+Route::post('/addusers', [CrudController::class, 'addUsers'])->name('addusers');
+// *
 
     Route::get('/home', function () {
         return view('Welcome');

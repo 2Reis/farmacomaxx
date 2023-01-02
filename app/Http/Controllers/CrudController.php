@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Farmacos;
+use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
 
-class FarmacosController extends Controller
+class CrudController extends Controller
 {
     public function index()
     {
@@ -33,10 +34,20 @@ class FarmacosController extends Controller
     public function addFarmaco (){
         return view('farmacos.adicionarfarmaco');
     }
+    public function addUser (Request $request){
+        $user = new User();
+        $user = $user -> create($request -> all());
+        return Redirect::to('/adicionarusuarios');
+    }
     public function addFarming (Request $request){
         $farmacos = new Farmacos();
         $farmacos = $farmacos -> create($request -> all());
         return Redirect::to('/farma');
+    }
+    public function userlist (Request $request){
+        $users = new User();
+        $users = $users -> create($request -> all());
+        return Redirect::to('/addUsers');
     }
     public function upFarming (Request $request,$medicamento){
         $data=$request->all();
