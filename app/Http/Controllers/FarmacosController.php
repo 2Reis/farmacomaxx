@@ -38,6 +38,15 @@ class FarmacosController extends Controller
         $farmacos = $farmacos -> create($request -> all());
         return Redirect::to('/farma');
     }
+    public function upFarming (Request $request,$medicamento){
+        $data=$request->all();
+        Farmacos::where('id',$medicamento)->update([
+            'name'=>$data['name'],
+            'price'=>$data['price'],
+            'category'=>$data['category'],
+        ]);
+        return Redirect::to('/farma');
+    }
     public function adicionarusuarios (){
         return view('cadastrarusuarios.adicionarusuarios');
     }

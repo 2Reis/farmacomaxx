@@ -39,8 +39,11 @@ Route::get('/editefarmaco/{id}', [FarmacosController::class, 'editeFarmaco'])->n
 Route::get('/removefarmaco/{id}', [FarmacosController::class, 'removeFarmaco'])->name('removefarmaco');
 Route::get('/adicionarfarmaco', [FarmacosController::class, 'addFarmaco'])->name('adicionarfarmaco');
 Route::post('/addFarm', [FarmacosController::class, 'addFarming'])->name('addfaming');
+Route::get('/upFarm/{id}', [FarmacosController::class, 'upFarming'])->name('upFarm');
 Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'])->name('adicionarusuarios');
-Route::post('/addusers', [FarmacosController::class, 'addFarming'])->name('addfaming');
+Route::post('/addfarmacos', [FarmacosController::class, 'addFarming'])->name('addfaming');
+Route::get('/farmacos.editefarma', [FarmacosController::class, 'editeFarms'])->name('editefarms');
+
 
     Route::get('/home', function () {
         return view('Welcome');
