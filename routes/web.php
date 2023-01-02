@@ -41,6 +41,7 @@ Route::get('/adicionarfarmaco', [FarmacosController::class, 'addFarmaco'])->name
 Route::post('/addFarm', [FarmacosController::class, 'addFarming'])->name('addfaming');
 Route::get('/upFarm/{id}', [FarmacosController::class, 'upFarming'])->name('upFarm');
 Route::get('/adicionarusuarios', [FarmacosController::class, 'adicionarusuarios'])->name('adicionarusuarios');
+Route::get('/userlist', [FarmacosController::class, 'userlist'])->name('userlist');
 Route::post('/addfarmacos', [FarmacosController::class, 'addFarming'])->name('addfaming');
 Route::get('/farmacos.editefarma', [FarmacosController::class, 'editeFarms'])->name('editefarms');
 

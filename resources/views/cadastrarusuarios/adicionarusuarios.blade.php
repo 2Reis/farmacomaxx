@@ -7,37 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="row gy-2 gx-3 align-items-center">
-        <div class="col-6">
-          <label class="visually-hidden" for="autoSizingInput">Name</label>
-          <input type="text" class="form-control" id="autoSizingInput" placeholder="Nome...">
-        </div>
-        <div class="col-6">
-          <label class="visually-hidden" for="autoSizingInputGroup">User Id</label>
-          <div class="input-group">           
-            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nome de usuário...">
+    <h1>Adicionar Usuarios</h1>
+    <form action="{{url('/adicionarusuarios')}}" method="GET">
+        @csrf
+    <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-3">
+            <label for="nome">Nome:</label>
+            <input type="text" name="name" placeholder="Insira o nome..">
           </div>
-        </div>
-        <div class="col-auto">
-          <label class="visually-hidden" for="autoSizingSelect">Cargo</label>
-          <select class="form-select" id="autoSizingSelect">
-            <option selected>Choose...</option>
-            <option value="1">Auditor</option>
-            <option value="2">Gerente</option>
-            <option value="3">Colaborador</option>
-          </select>
-        </div>
-        <div class="col-auto">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-            <label class="form-check-label" for="autoSizingCheck">
-              Remember me
-            </label>
+          <div class="col-6 col-sm-3">
+            <label for="nome">Email:</label>
+            <input type="text" name="price" placeholder="Email..">
           </div>
-        </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
-</body>
-</html>
+          <div class="col-6 col-sm-3">
+            <label for="category">UserID:</label>
+            <input class="form-control form-control-sm" type="text" name="category" placeholder="UserID..">
+            <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+          </div>
+      </div>
+    </form>

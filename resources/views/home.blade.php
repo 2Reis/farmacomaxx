@@ -32,8 +32,8 @@
                     </a>                    
                 </div>
                 <div class="col-3 p-5 text-center">
-                    <a href="{{route('medicamentos',['name'=>'generico'])}}">
-                        <input type="button" value="Lista de Genericos" class="btn btn-secondary"> 
+                    <a href="{{route('userlist')}}">
+                        <input type="button" value="Lista de Usuarios" class="btn btn-secondary"> 
                     </a>                       
                 </div>
                 <div id="footer" class="col-12 text-center p-5">
