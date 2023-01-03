@@ -44,10 +44,13 @@ class CrudController extends Controller
         $farmacos = $farmacos -> create($request -> all());
         return Redirect::to('/farma');
     }
-    public function userlist (Request $request){
-        $users = new User();
-        $users = $users -> create($request -> all());
-        return Redirect::to('/addUsers');
+    public function userlist (){
+        $users = User::get();
+        return view('cadastrarusuarios.users',['users' => $users]);    
+    }
+    public function editUsers (Request $request, $users){
+        $user = User::findOrFail($users);
+        return view('cadastrarusuarios.useredit',['usuarios' => $user]);
     }
     public function upFarming (Request $request,$medicamento){
         $data=$request->all();
@@ -58,6 +61,15 @@ class CrudController extends Controller
         ]);
         return Redirect::to('/farma');
     }
+    public function upUsers (Request $request,$usuario){
+        $data=$request->all();
+        User::where('id',$usuario)->update([
+            'name'=>$data['name'],
+            'email'=>$data['email'],
+            'password'=>$data['password'],
+        ]);
+        return Redirect::to('/users');
+    }    
     public function adicionarusuarios (){
         return view('cadastrarusuarios.adicionarusuarios');
     }

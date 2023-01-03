@@ -8,8 +8,7 @@
 </head>
 <body>
     <h1>Adicionar Usuarios</h1>
-    <form action="{{url('/adicionarusuarios')}}" method="GET">
-        @csrf
+    <form action="{{url('/addusers')}}" method="POST">
     <div class="container">
         <div class="row">
           <div class="col-6 col-sm-3">
@@ -18,11 +17,11 @@
           </div>
           <div class="col-6 col-sm-3">
             <label for="nome">Email:</label>
-            <input type="text" name="price" placeholder="Email..">
+            <input type="text" name="email" placeholder="Email..">
           </div>
           <div class="col-6 col-sm-3">
-            <label for="category">UserID:</label>
-            <input class="form-control form-control-sm" type="text" name="category" placeholder="UserID..">
+            <label for="password">Senha:</label>
+            <input class="form-control form-control-sm" type="text" name="password" placeholder="Senha..">
             <div class="col-auto">
         <button type="submit" class="btn btn-primary">Adicionar</button>
           </div>

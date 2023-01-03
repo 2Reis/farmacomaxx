@@ -12,9 +12,8 @@
         <p>name: {{ $users["name"] }}</p>
         <p>email: {{ $users["email"] }}</p>
         <p>id: {{ $users["id"] }}</p>
-        <a href="{{ route('editeuser',['id'=>$users["id"]]) }}">Editar</a>
+        <a href="{{ route('edituser',['id'=>$users["id"]]) }}">Editar</a>
         <a href="{{ route('removeuser',['id'=>$users["id"]]) }}">Remover</a>
     @endforeach   
-       
 </body>
 </html>

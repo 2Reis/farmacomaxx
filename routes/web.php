@@ -26,17 +26,17 @@ Route::get('/adicionarfarmaco', [CrudController::class, 'addFarmaco'])->name('ad
 Route::post('/addFarm', [CrudController::class, 'addFarming'])->name('addfaming');
 Route::get('/upFarm/{id}', [CrudController::class, 'upFarming'])->name('upFarm');
 Route::post('/addfarmacos', [CrudController::class, 'addFarming'])->name('addfaming');
-Route::get('/farmacos.editefarma', [CrudController::class, 'editeFarms'])->name('editefarms');
+// Route::get('/farmacos.editefarma', [CrudController::class, 'editeFarms'])->name('editefarms');
 // *
 // Usuarios
 Route::get('/adicionarusuarios', [CrudController::class, 'adicionarusuarios'])->name('adicionarusuarios');
 Route::post('/adduser', [CrudController::class, 'addUser'])->name('adduser');
 Route::get('/userlist', [CrudController::class, 'userlist'])->name('userlist');
-Route::get('/editeuser/{id}', [CrudController::class, 'editeusers'])->name('editeuser');
+Route::get('/edituser/{id}', [CrudController::class, 'editUsers'])->name('edituser');
 Route::get('/removeuser/{id}', [CrudController::class, 'removeusers'])->name('removeuser');
 Route::post('/addusers', [CrudController::class, 'addUsers'])->name('addusers');
+Route::get('/upuser/{id}', [CrudController::class, 'upUsers'])->name('upUsers');
 // *
-
     Route::get('/home', function () {
         return view('Welcome');
     }) ->name('home-index');
