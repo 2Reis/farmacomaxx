@@ -28,6 +28,10 @@ class CrudController extends Controller
         Farmacos::destroy($medicamento);
        return redirect()->back();
     }
+    public function removeusers (Request $request, $users){
+        User::destroy($users);
+       return redirect()->back();
+    }
     public function insereFarmaco(){
        return view('inserefarma');
     }
@@ -48,9 +52,9 @@ class CrudController extends Controller
         $users = User::get();
         return view('cadastrarusuarios.users',['users' => $users]);    
     }
-    public function editUsers (Request $request, $users){
-        $user = User::findOrFail($users);
-        return view('cadastrarusuarios.useredit',['usuarios' => $user]);
+    public function editUsers (Request $request, $user_id){
+        $users = User::findOrFail($user_id);
+        return view('cadastrarusuarios.useredit')->with('users',$users);
     }
     public function upFarming (Request $request,$medicamento){
         $data=$request->all();
@@ -61,9 +65,9 @@ class CrudController extends Controller
         ]);
         return Redirect::to('/farma');
     }
-    public function upUsers (Request $request,$usuario){
+    public function upUsers (Request $request,$usuarios){
         $data=$request->all();
-        User::where('id',$usuario)->update([
+        User::where('id',$usuarios)->update([
             'name'=>$data['name'],
             'email'=>$data['email'],
             'password'=>$data['password'],

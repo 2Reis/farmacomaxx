@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Adicionar Usuarios</h1>
-    <form action="{{url('/addusers')}}" method="POST">
+    <form action="{{url('/adduser')}}" method="POST">
+        @csrf
     <div class="container">
         <div class="row">
           <div class="col-6 col-sm-3">

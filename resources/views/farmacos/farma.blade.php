@@ -14,7 +14,5 @@
         <a href="{{ route('editefarmaco',['id'=>$farmaco["id"]]) }}">Editar</a>
         <a href="{{ route('removefarmaco',['id'=>$farmaco["id"]]) }}">Remover</a>
     @endforeach
-    
-       
 </body>
 </html>
