@@ -54,7 +54,7 @@ class CrudController extends Controller
     }
     public function editUsers (Request $request, $user_id){
         $users = User::findOrFail($user_id);
-        return view('cadastrarusuarios.useredit')->with('users',$users);
+        return view('cadastrarusuarios.useredit',['users' => $users]);
     }
     public function upFarming (Request $request,$medicamento){
         $data=$request->all();

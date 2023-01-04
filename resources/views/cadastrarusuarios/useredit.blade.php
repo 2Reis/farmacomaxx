@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Lista de Usuarios</h1>
-    <form action="{{route('upUsers',['id'=>$users->id])}}" method="GET">
+    <form action="{{route('edituser',['id'=>$users->id])}}" method="GET">
         @csrf
     <div class="container">
         <div class="row">
@@ -24,7 +24,7 @@
             <input type="text" name="password" value="{{$users->password}}">
           </div>
           <div class="col-6 col-sm-3">
-        <button type="submit" class="btn btn-primary">Adicionar</button>
+        <button type="submit" class="btn btn-primary">Editar</button>
           </div>
       </div>
     </form>
